@@ -26,15 +26,29 @@ public class SkyView
     public double getAverage(int startRow, int endRow, int startCol, int endCol)
     {
         double sum = 0;
+        double count = 0;
         for (int i = startRow; i <= endRow; i++)
         {
             for(int j = startCol; j <= endCol; j++)
             {
                 sum = sum + view[i][j];
+                count = count + 1;
             }
         }
-
-
+        return sum/count;
+    }
+    public String toString()
+    {
+        String temp = "";
+        for(int i = 0; i < view.length; i++)
+        {
+            for(int  j = 0; j < view[i].length; j++)
+            {
+                temp = temp + view[i][j] + " ";
+            }
+            temp = temp + "\n";
+        }
+        return temp;
     }
 
 }

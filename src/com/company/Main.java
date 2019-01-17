@@ -10,6 +10,7 @@ public class Main {
         SkyView sv1 = new SkyView(4,3, scan);
         SkyView sv2 = new SkyView(3,2, scan2);
 
+
         System.out.println(sv1);
         System.out.println(sv2);
 
